@@ -3,7 +3,7 @@ Template package with CI and everything else to get started quickly with creatin
 
 ![GitHub](https://img.shields.io/github/license/Meteor-Community-Packages/template-package)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Meteor-Community-Packages/template-package) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END -->
+![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Meteor-Community-Packages/template-package) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END --> ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/Meteor-Community-Packages/template-package?label=latest&sort=semver) [![](https://img.shields.io/badge/semver-2.0.0-success)](http://semver.org/spec/v2.0.0.html)
 
 ## Getting started
 1. Copy this repo to your new repository
@@ -15,6 +15,11 @@ Template package with CI and everything else to get started quickly with creatin
 ### GitHub apps
 * [All Contributors](https://allcontributors.org/)
 * [LGTM.com](https://lgtm.com/)
+
+### Semver
+This repository is setup to follow the [Semantic Versioning standard](https://semver.org/).
+
+[![](https://img.shields.io/badge/semver-2.0.0-success)](http://semver.org/spec/v2.0.0.html)
 
 ### Typescript
 If you want to use TypeScript in your package follow the following steps.
