@@ -3,18 +3,24 @@ Template package with CI and everything else to get started quickly with creatin
 
 ![GitHub](https://img.shields.io/github/license/Meteor-Community-Packages/template-package)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Meteor-Community-Packages/template-package)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END -->
+![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Meteor-Community-Packages/template-package) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+## Getting started
+1. Copy this repo to your new repository
+2. Update links, names and content in `package.js`, `package.json`, `CHANGELOG.md`, `CONTRIBUTING.md`, `README.md`
+3. Update content in `.github` directory to your liking.
+* [Funding documentation](https://help.github.com/en/github/building-a-strong-community/displaying-a-sponsor-button-in-your-repository)
 
-## GitHub apps
+## What is under the hood 
+### GitHub apps
 * [All Contributors](https://allcontributors.org/)
 * [LGTM.com](https://lgtm.com/)
 
-## Typescript
+### Typescript
 If you want to use TypeScript in your package follow the following steps.
 
-### package.js
-### Standard
+#### package.js
+#### Standard
 You will need to adjust StandardJS according to [their guide](https://standardjs.com/index.html#typescript). 
 
 ## Contributors ✨
