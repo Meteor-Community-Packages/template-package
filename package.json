@@ -1,0 +1,39 @@
+{
+  "name": "template-meteor-package",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Template Meteor package for FOSS",
+  "main": "package.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meteor-Community-Packages/template-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Meteor-Community-Packages/template-package/issues"
+  },
+  "homepage": "https://github.com/Meteor-Community-Packages/template-package#readme",
+  "readme": "README.md",
+  "scripts": {
+    "test": "npm run lint && meteor test-packages ./",
+    "lint": "./node_modules/.bin/standard --fix",
+    "publish": "meteor npm i && npm prune --production && meteor publish && meteor npm i",
+    "all-contributors": "./node_modules/.bin/all-contributors",
+    "all-contributors-generate": "./node_modules/.bin/all-contributors generate"
+  },
+  "author": "Jan Dvorak",
+  "license": "MIT",
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run all-contributors-generate"
+    }
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^6.11.0",
+    "babel-eslint": "^10.0.3",
+    "husky": "^3.0.9",
+    "standard": "^14.3.1"
+  }
+}
