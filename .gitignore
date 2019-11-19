@@ -1,2 +1,6 @@
 node_modules/
-.idea/
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
