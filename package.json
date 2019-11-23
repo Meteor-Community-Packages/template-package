@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run all-contributors-generate"
+      "pre-commit": "bash preCommit.sh && npm run all-contributors-generate"
     }
   },
   "devDependencies": {
