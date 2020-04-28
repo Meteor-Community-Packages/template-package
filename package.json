@@ -25,9 +25,13 @@
   "standard": {
     "parser": "babel-eslint"
   },
+  "funding": {
+    "type": "PayPal",
+    "url": "https://www.paypal.me/JDvorak"
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "bash preCommit.sh && npm run all-contributors-generate"
+      "pre-commit": "bash preCommit.sh" 
     }
   },
   "devDependencies": {
