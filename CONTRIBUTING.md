@@ -10,7 +10,7 @@
 
 ### Make changes & test
 * Make your changes.
-* Run tests via `npm run test`.
+* Run tests via `npm run test` & any other required tests.
 * If everything is green commit and push. 
 * Submit pull request
 

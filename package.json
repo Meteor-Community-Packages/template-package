@@ -31,7 +31,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "bash preCommit.sh" 
+      "pre-commit": "bash preCommit.sh"
     }
   },
   "devDependencies": {
