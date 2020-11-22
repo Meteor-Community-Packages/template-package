@@ -25,12 +25,15 @@ A clear and concise description of what you expected to happen.
 
 **Screenshots**
 
-If applicable, add screenshots to help explain your problem.
+If applicable, add screenshots to help explain your problem. Please avoid
+screenshots of code or error outputs and use [formatted code via markdown](https://guides.github.com/features/mastering-markdown/)
+instead.
 
 **Versions (please complete the following information):**
- - Meteor version: [e.g. 1.8.2]
+ - Meteor version: [e.g. 1.8.2] <!-- see .meteor/release -->
  - Browser: [e.g. firefox, chrome, safari]
- - Version: [e.g. 1.0.0]
+ - Package version: [e.g. 1.0.0] <!-- see .meteor/versions -->
+ 
 
 **Additional context**
 
