@@ -35,9 +35,9 @@
     }
   },
   "devDependencies": {
-    "all-contributors-cli": "^6.11.0",
+    "all-contributors-cli": "^6.20.0",
     "babel-eslint": "^10.0.3",
-    "husky": "^3.0.9",
-    "standard": "^14.3.1"
+    "husky": "^6.0.0",
+    "standard": "^16.0.3"
   }
 }
