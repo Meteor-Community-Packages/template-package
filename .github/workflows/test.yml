@@ -23,7 +23,6 @@ jobs:
           - '--release 2.3.4'
           - '--release 2.3.5'
           # Latest version
-          - 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
