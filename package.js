@@ -12,7 +12,7 @@ Package.describe({
 })
 
 Package.onUse(function (api) {
-  api.versionsFrom('1.8.1')
+  api.versionsFrom('1.9')
   api.use('ecmascript')
   api.mainModule('./client/index.js', 'client')
   api.mainModule('./server/index.js', 'server')
