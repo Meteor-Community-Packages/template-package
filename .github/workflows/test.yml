@@ -1,41 +1,55 @@
-name: Test
-on: push
+name: Test suite
+
+# in this configuration the ci runs only when code is pushed to master branch or a pull request is created
+# in general it is advised to not push to master directly but to create a pull request instead
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
-  test:
+  lintcode:
+    name: Javascript lint
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        meteorRelease:
-          - '--release 1.12.1'
-          - '--release 2.1.1'
-          - '--release 2.2.3'
-          - '--release 2.3.5'
-          - '--release 2.4'
-          - '--release 2.5.8'
-          - '--release 2.6.1'
-          - '--release 2.7.3'
-          - '--release 2.8.1'
-          - '--release 2.9.1'
-          - '--release 2.10.0'
-          - '--release 2.11.0'
-          # Latest version
-          -
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: '14.x'
+          node-version: 22
 
-      - name: Install Dependencies
-        run: |
-          curl https://install.meteor.com | /bin/sh
-          npm i -g @zodern/mtest
+      - name: cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-22-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-22-
+      - run: cd test-proxy && npm ci
+      - run: cd test-proxy && npm run lint:code && npm run format:code
 
-      - name: Run Tests
-        run: |
-          # Retry tests since some of them are flaky
-          mtest --package ./ --once ${{ matrix.meteorRelease }} || mtest --package ./ --once ${{ matrix.meteorRelease }} 
+  # at the moment we only test against meteor 3.2.2
+  # because mtest is not working properly with meteor 3+
+  tests:
+    name: Meteor ${{ matrix.meteor }} tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Setup meteor
+        uses: meteorengineer/setup-meteor@v1
+        with:
+          meteor-release: '3.2.2'
+
+      - name: cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-22-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-22-
+      - run: cd testapp && npm run ci
