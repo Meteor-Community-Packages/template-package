@@ -1,43 +1,59 @@
 {
-  "name": "template-meteor-package",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Template Meteor package for FOSS",
-  "main": "package.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Meteor-Community-Packages/template-package.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Meteor-Community-Packages/template-package/issues"
-  },
-  "homepage": "https://github.com/Meteor-Community-Packages/template-package#readme",
-  "readme": "README.md",
-  "scripts": {
-    "test": "npm run lint && meteor test-packages ./",
-    "lint": "./node_modules/.bin/standard --fix",
-    "publish": "meteor npm i && npm prune --production && meteor publish && meteor npm i",
-    "all-contributors": "./node_modules/.bin/all-contributors",
-    "all-contributors-generate": "./node_modules/.bin/all-contributors generate"
-  },
-  "author": "Jan Dvorak",
-  "license": "MIT",
-  "standard": {
-    "parser": "babel-eslint"
-  },
-  "funding": {
-    "type": "PayPal",
-    "url": "https://www.paypal.me/JDvorak"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "bash preCommit.sh"
-    }
-  },
-  "devDependencies": {
-    "all-contributors-cli": "^6.20.0",
-    "babel-eslint": "^10.0.3",
-    "husky": "^6.0.0",
-    "standard": "^16.0.3"
-  }
+	"name": "template-meteor-package",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Template Meteor package for FOSS",
+	"main": "package.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Meteor-Community-Packages/template-package.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Meteor-Community-Packages/template-package/issues"
+	},
+	"homepage": "https://github.com/Meteor-Community-Packages/template-package#readme",
+	"readme": "README.md",
+	"scripts": {
+		"test": "cd testapp && npm run test",
+		"test:watch": "cd testapp && npm run test:watch",
+		"test:browser": "cd testapp && npm run test:browser",
+		"lint:check": "npx @biomejs/biome lint ./",
+		"lint:write": "npx @biomejs/biome lint --write ./",
+		"format:check": "npx @biomejs/biome format ./",
+		"format:write": "npx @biomejs/biome format --write ./",
+		"publish": "meteor npm i && npm prune --production && meteor publish && meteor npm i",
+		"all-contributors": "./node_modules/.bin/all-contributors",
+		"all-contributors-generate": "./node_modules/.bin/all-contributors generate"
+	},
+	"author": "Jan Dvorak",
+	"contributors": [
+		"Jan Dvorak",
+		"Jan Küster"
+	],
+	"license": "MIT",
+	"funding": [
+		{
+			"type": "PayPal",
+			"url": "https://www.paypal.me/JDvorak"
+		},
+		{
+			"type": "GitHub",
+			"url": "https://github.com/sponsors/StorytellerCZ"
+		},
+		{
+			"type": "GitHub",
+			"url": "https://github.com/sponsors/jankapunkt"
+		}
+	],
+	"husky": {
+		"hooks": {
+			"pre-commit": "bash preCommit.sh"
+		}
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.7",
+		"all-contributors-cli": "^6.20.0",
+		"chai": "^6.2.1",
+		"husky": "^6.0.0"
+	}
 }

@@ -1,3 +1,3 @@
-export const packageName = 'template-package'
+export const packageName = "template-package";
 
-export default packageName
+export default packageName;
