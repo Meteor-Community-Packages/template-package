@@ -1,4 +1,6 @@
 name: Test suite
+permissions:
+  contents: read
 
 # in this configuration the ci runs only when code is pushed to master branch or a pull request is created
 # in general it is advised to not push to master directly but to create a pull request instead
@@ -28,7 +30,7 @@ jobs:
           key: ${{ runner.os }}-node-22-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-22-
-      - run: | 
+      - run: |
           npm ci
           npm run lint:check
           npm run format:check
