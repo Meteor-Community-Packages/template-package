@@ -28,8 +28,10 @@ jobs:
           key: ${{ runner.os }}-node-22-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-22-
-      - run: cd test-proxy && npm ci
-      - run: cd test-proxy && npm run lint:code && npm run format:code
+      - run: | 
+          npm ci
+          npm run lint:check
+          npm run format:check
 
   # at the moment we only test against meteor 3.2.2
   # because mtest is not working properly with meteor 3+
@@ -52,4 +54,8 @@ jobs:
           key: ${{ runner.os }}-node-22-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-22-
-      - run: cd testapp && npm run ci
+      - run: |
+          ./setupTests.sh
+          cd testapp
+          npm ci
+          npm run test
